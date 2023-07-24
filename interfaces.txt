@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:7380ebb8-88df-4eab-a7fa-c702d5f0304b">
+	<data>
+		<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+			<interface>
+				<GigabitEthernet>
+					<name>1</name>
+					<ip>
+						<address>
+							<primary>
+								<address>10.215.27.111</address>
+								<mask>255.255.254.0</mask>
+							</primary>
+						</address>
+					</ip>
+					<logging>
+						<event>
+							<link-status/>
+						</event>
+					</logging>
+					<mop>
+						<enabled>false</enabled>
+						<sysid>false</sysid>
+					</mop>
+					<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+						<auto>true</auto>
+					</negotiation>
+				</GigabitEthernet>
+				<GigabitEthernet>
+					<name>2</name>
+					<shutdown/>
+					<logging>
+						<event>
+							<link-status/>
+						</event>
+					</logging>
+					<mop>
+						<enabled>false</enabled>
+						<sysid>false</sysid>
+					</mop>
+					<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+						<auto>true</auto>
+					</negotiation>
+				</GigabitEthernet>
+				<GigabitEthernet>
+					<name>3</name>
+					<shutdown/>
+					<logging>
+						<event>
+							<link-status/>
+						</event>
+					</logging>
+					<mop>
+						<enabled>false</enabled>
+						<sysid>false</sysid>
+					</mop>
+					<negotiation xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+						<auto>true</auto>
+					</negotiation>
+				</GigabitEthernet>
+			</interface>
+		</native>
+	</data>
+</rpc-reply>

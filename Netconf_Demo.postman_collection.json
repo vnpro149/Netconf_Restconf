@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "471fd99e-39bb-4f3c-a656-649c1b8da6e8",
+		"name": "Netconf_Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27033646"
+	},
+	"item": [
+		{
+			"name": "Get capability",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vnpro#123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vnpro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.215.27.111/restconf/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"215",
+						"27",
+						"111"
+					],
+					"path": [
+						"restconf",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vnpro#123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vnpro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.215.27.111/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"10",
+						"215",
+						"27",
+						"111"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get interface g1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vnpro#123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vnpro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.215.27.111/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"215",
+						"27",
+						"111"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=GigabitEthernet1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interface Loopback1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vnpro#123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vnpro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ietf-interfaces:interface\": {\r\n    \"name\": \"Loopback1\",\r\n    \"description\": \"Chien's Loopback\",\r\n    \"type\": \"iana-if-type:softwareLoopback\",\r\n    \"enabled\": true,\r\n    \"ietf-ip:ipv4\": {\r\n      \"address\": [\r\n        {\r\n          \"ip\": \"10.1.1.1\",\r\n          \"netmask\": \"255.255.255.0\"\r\n        }\r\n      ]\r\n    },\r\n    \"ietf-ip:ipv6\": {}\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://10.215.27.111/restconf/data/ietf-interfaces:interfaces/interface=Loopback1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"215",
+						"27",
+						"111"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=Loopback1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
